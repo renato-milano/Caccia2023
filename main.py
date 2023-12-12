@@ -16,7 +16,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return CHOOSING
 
 async def scegliLibro(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if "in ing".lower() in update.message.text.lower():
+    if "ing".lower() in update.message.text.lower() or "eng".lower() in update.message.text.lower():
         libri = selezionaLibro("in inglese")
         context.user_data["lingua"] = "ENG"
     else:
